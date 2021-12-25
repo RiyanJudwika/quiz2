@@ -89,6 +89,8 @@
               var farenheit = 9/5*parseInt(suhuC)+32;
               var reamur = 4/5*parseInt(suhuC);
               var kelvin = parseInt(suhuC)+273.15;
+
+
               $("#kelvin").val(kelvin);
               $("#reamur").val(reamur);
               $("#fahrenheit").val(farenheit);
@@ -98,9 +100,11 @@
     $("#fahrenheit").keyup(function(){
               var suhuF = $("#fahrenheit").val();
 
-              var celsius = parseInt(suhuF)-32*5/9;
-              var reamur =  4/9*parseInt(suhuF)-32;
-              var kelvin = parseInt(suhuF)-32*5/9+273.15;
+              var celsius = (parseInt(suhuF)-32)*5/9;
+              var reamur =  4/9*(parseInt(suhuF)-32);
+              var kelvin =  5/9 * (parseInt(suhuF)-32)+273.15;
+
+
               $("#kelvin").val(kelvin);
               $("#reamur").val(reamur);
               $("#celsius").val(celsius);
@@ -110,8 +114,10 @@
               var suhuK = $("#kelvin").val();
 
               var celsius = parseInt(suhuK)-273.15;
-              var reamur =  4/9*parseInt(suhuK)-32;
-              var fahrenheit = parseInt(suhuK)-32*5/9+273.15;
+              var reamur =  4/5*(parseInt(suhuK)-273);
+              var fahrenheit = 9/5*(parseInt(suhuK)-273)+32;
+
+
               $("#fahrenheit").val(fahrenheit);
               $("#reamur").val(reamur);
               $("#celsius").val(celsius);
@@ -120,9 +126,11 @@
     $("#reamur").keyup(function(){
               var suhuR = $("#reamur").val();
 
-              var celsius = parseInt(suhuR)-32*5/9;
-              var fahrenheit =  4/9*parseInt(suhuR)-32;
-              var kelvin = parseInt(suhuR)-32*5/9+273.15;
+              var celsius = 5/4*parseInt(suhuR);
+              var fahrenheit =  9/4*parseInt(suhuR)+32;
+              var kelvin = 5/4*parseInt(suhuR)+273.15;
+
+              
               $("#kelvin").val(kelvin);
               $("#fahrenheit").val(fahrenheit);
               $("#celsius").val(celsius);
